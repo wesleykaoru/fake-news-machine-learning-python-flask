@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <title>Fake news - Detect</title>
+
+</head>
+
+
+<div class='top'>
+    Fake news - Detect <i class="fas fa-robot"></i>
+</div>
+
+<div class="content">
+    </br>
+    <b>Fake news - detect: </b> This project has proposed to analyze data through machine learning and provide an output
+    binary (True or Fake). </br></br>
+
+    Code of this project can be found here: <a
+        href="https://github.com/wesleykaoru/fake-news-machine-learning-python-flask"> github <i
+            class="fa fa-poll-h"></i></a></br></br>
+
+    <b>How to use: </b> Just put text news on the field below and verify it.</br></br>
+
+</div>
+
+<div class="content">
+    <form action="/" method="POST">
+
+        <textarea name="text" maxlength="100000" placeholder="Text news here" required="required"></textarea>
+
+        <input type="submit" class="button" value="Verify">
+
+    </form>
+</div>
+
+
+</br></br>
+<div class="result">
+
+
+    {% if data == 'null' %}
+
+    {% elif data == 1 %}
+    <i class="fa fa-robot">: </i> The news is <strong>fake!</strong> Look for other source.
+
+    {% else %}
+    <i class="fa fa-robot">: The news is <strong>true!</strong></i>
+
+    {%endif%}
+
+</div>
