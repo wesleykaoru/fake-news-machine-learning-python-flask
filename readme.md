@@ -1,7 +1,7 @@
 
 # Fake news detect
 
-![Example](https://gifyu.com/image/Q9MR)
+![Example](https://media.giphy.com/media/S65P8WAdZUxSyIVR6J/giphy.gif)
 
 ---
 
